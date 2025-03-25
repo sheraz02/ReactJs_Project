@@ -1,0 +1,120 @@
+.r-container {
+    overflow: hidden;
+    position: relative;
+}
+/* Add this to Residencies.css
+.r-wrapper {
+    background-color: black;
+}
+/* Add this to Contact.css */
+/* .v-wrapper {
+    background-color: black;
+} */ 
+
+.r-head {
+    margin-bottom: 2rem;
+}
+
+.r-card {
+    gap: 0.6rem;
+    padding: 1rem;
+    border-radius: 20px;
+    max-width: max-content;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.r-card:hover {
+    transform: scale(1.05);
+}
+
+.r-image-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.r-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.r-image-container:hover img {
+    opacity: 0.6;
+}
+
+.r-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 1rem;
+    text-align: center;
+}
+
+.r-image-container:hover .r-overlay {
+    opacity: 1;
+}
+
+.r-overlay .primaryText {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--lightBlue);
+    text-align: justify;
+    margin-bottom: 0.5rem;
+}
+
+.r-overlay .secondaryText {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.r-buttons {
+    position: absolute;
+    top: -4rem;
+    right: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.r-button {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.r-button:hover {
+    background-color: #357ABD;
+}
+
+@media (max-width: 640px) {
+    .r-container {
+        padding: 1rem;
+    }
+
+    .r-head {
+        align-items: center;
+    }
+
+    .r-buttons {
+        position: initial;
+        margin-top: 1rem;
+    }
+}
